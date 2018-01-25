@@ -1,0 +1,355 @@
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~
+$ pwd
+/c/Users/Osi
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~
+$ cd documents
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents
+$ cd github
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github
+$ cd gpsexample
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ pwd
+/c/Users/Osi/documents/github/gpsexample
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Andorid.gitignore
+        GPSExample/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git log
+commit 67b42308741ebb04b96a56016f12cec96c8cd6e2 (HEAD -> master)
+Author: Osi <Osal222@uky.edu>
+Date:   Wed Jan 24 11:13:39 2018 -0500
+
+    description of change, floowing git hub exerciese 1.1
+
+commit 8350241e87019796dd6ecdfcd018317691ca6dea
+Author: Osi <Osal222@uky.edu>
+Date:   Wed Jan 24 11:12:02 2018 -0500
+
+    description of change, floowing git hub exerciese 1
+
+commit ebcb410bb90230f99149253d5a3da6fd85151685
+Author: Osal222 <35607860+Osal222@users.noreply.github.com>
+Date:   Wed Jan 24 08:57:37 2018 -0500
+
+    Initial commit
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git checkout master
+Already on 'master'
+M       README.md
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git checkout HEAD README.md
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git add a.gitignore
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git commit -m 'description of change, floowing git hub exerciese 1.2'
+[master f6880b8] description of change, floowing git hub exerciese 1.2
+ 1 file changed, 4 insertions(+)
+ create mode 100644 a.gitignore
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ mkdie bin
+bash: mkdie: command not found
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ mkdir bin
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ touch bin/somefile.exe
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ touch file.class
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        GPSExample/
+        bin/
+        file.class
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git diff -staged
+error: invalid option: -staged
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git diff ~staged
+fatal: ambiguous argument '~staged': unknown revision or path not in the working
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ touch file2.class
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git rm <file2.class>
+bash: syntax error near unexpected token `newline'
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git commit -m 'description of change, floowing git hub exerciese 1.3 delete fi
+On branch master
+Changes not staged for commit:
+        modified:   README.md
+
+Untracked files:
+        GPSExample/
+        bin/
+        file.class
+        file2.class
+
+no changes added to commit
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git rm -- cached <file2.class>
+bash: syntax error near unexpected token `newline'
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ touch file2.class
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git rm --cached <file2.class>
+bash: syntax error near unexpected token `newline'
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git rm --cached <file2.class>
+bash: syntax error near unexpected token `newline'
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ mv file2.class file3.class
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git clone https://github.com/osal222/gitpractice.git
+Cloning into 'gitpractice'...
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': osal222
+9851remote: Repository not found.
+fatal: repository 'https://github.com/osal222/gitpractice.git/' not found
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git clone https://github.com/osal222/gitpractice.git
+Cloning into 'gitpractice'...
+remote: Repository not found.
+fatal: repository 'https://github.com/osal222/gitpractice.git/' not found
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ git clone https://github.com/osal222/gitpractice.git
+Cloning into 'gitpractice'...
+remote: Counting objects: 29, done.
+remote: Total 29 (delta 0), reused 0 (delta 0), pack-reused 29
+Unpacking objects: 100% (29/29), done.
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample (master)
+$ cd gitpractice
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ git remote -v
+origin  https://github.com/osal222/gitpractice.git (fetch)
+origin  https://github.com/osal222/gitpractice.git (push)
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ touch newfile.txt
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ notepad newfile.txt
+
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ echo "new file contents" > newfile.txt
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ git commit -m 'practice changes'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+        newfile.txt
+
+nothing added to commit but untracked files present
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ git poush
+git: 'poush' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ git push
+
+Everything up-to-date
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ git remote -v
+origin  https://github.com/osal222/gitpractice.git (fetch)
+origin  https://github.com/osal222/gitpractice.git (push)
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ pwd
+/c/Users/Osi/documents/github/gpsexample/gitpractice
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ cd /c/users/ose/documents/github/
+bash: cd: /c/users/ose/documents/github/: No such file or directory
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ pwd
+/c/Users/Osi/documents/github/gpsexample/gitpractice
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ cd /c/users/ose/documents/github
+bash: cd: /c/users/ose/documents/github: No such file or directory
+
+Osi@LAPTOP-G39P2MC1 MINGW64 ~/documents/github/gpsexample/gitpractice (master)
+$ cd /c/users/osi/documents/github
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github
+$ dir
+Android-Studio-Project  GPSExample
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github
+$ git clone https://github.com/burrisetest/BestTechReferences.git
+Cloning into 'BestTechReferences'...
+remote: Counting objects: 138, done.
+remote: Total 138 (delta 0), reused 0 (delta 0), pack-reused 138
+Receiving objects: 100% (138/138), 28.58 KiB | 380.00 KiB/s, done.
+Resolving deltas: 100% (36/36), done.
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github
+$ cd BestTechReferences
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (ma
+$ checkout -b EddiesContribution
+bash: checkout: command not found
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (master)
+$ git checkout -b EddiesContribution
+Switched to a new branch 'EddiesContribution'
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git branch EddiesContribution
+fatal: A branch named 'EddiesContribution' already exists.
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git push origin EddiesContribution
+remote: Permission to burrisetest/BestTechReferences.git denied to Osal222.
+fatal: unable to access 'https://github.com/burrisetest/BestTechReferences.git/': The requested URL returned error: 403
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git remote add upstream https://github.com/burrise/BestTechReferences
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git fetch upstream
+remote: Counting objects: 21, done.
+remote: Total 21 (delta 2), reused 2 (delta 2), pack-reused 19
+Unpacking objects: 100% (21/21), done.
+From https://github.com/burrise/BestTechReferences
+ * [new branch]      master     -> upstream/master
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git merge upstream/master
+Updating c60f768..4d79259
+Fast-forward
+ CodeInspection/HomeControllerPartial.cs  | 136 ++++++++++++++++++++++++++
+ CodeInspection/Index.cshtml              | 107 +++++++++++++++++++++
+ References.txt                           |  10 +-
+ Team 3 Presentation/.gitattributes       |  22 +++++
+ Team 3 Presentation/.gitignore           | 159 +++++++++++++++++++++++++++++++
+ Team 3 Presentation/Git.pptx             | Bin 0 -> 304802 bytes
+ Team 3 Presentation/GitHub Tutorial.pptx | Bin 0 -> 671649 bytes
+ 7 files changed, 433 insertions(+), 1 deletion(-)
+ create mode 100644 CodeInspection/HomeControllerPartial.cs
+ create mode 100644 CodeInspection/Index.cshtml
+ create mode 100644 Team 3 Presentation/.gitattributes
+ create mode 100644 Team 3 Presentation/.gitignore
+ create mode 100644 Team 3 Presentation/Git.pptx
+ create mode 100644 Team 3 Presentation/GitHub Tutorial.pptx
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git pull upstream master
+From https://github.com/burrise/BestTechReferences
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git status
+On branch EddiesContribution
+nothing to commit, working tree clean
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git remote add upstream https://github.com/burrise/BestTechReferences
+fatal: remote upstream already exists.
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git add *.*
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git commit -m 'resolved conflicts'
+On branch EddiesContribution
+nothing to commit, working tree clean
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git push origin EddiesContribution
+remote: Permission to burrisetest/BestTechReferences.git denied to Osal222.
+fatal: unable to access 'https://github.com/burrisetest/BestTechReferences.git/': The requested URL returned error: 403
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ git clone https://github.com/burrisetest/BestTechReferences.git
+Cloning into 'BestTechReferences'...
+remote: Counting objects: 138, done.
+remote: Total 138 (delta 0), reused 0 (delta 0), pack-reused 138
+Receiving objects: 100% (138/138), 28.58 KiB | 201.00 KiB/s, done.
+Resolving deltas: 100% (36/36), done.
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences (EddiesContribution)
+$ cd BestTechReferences
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences/BestTechReferences (master)
+$ git checkout -b EddiesContribution
+Switched to a new branch 'EddiesContribution'
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences/BestTechReferences (EddiesContribution)
+$ git push origin EddiesContribution
+remote: Permission to burrisetest/BestTechReferences.git denied to Osal222.
+fatal: unable to access 'https://github.com/burrisetest/BestTechReferences.git/': The requested URL returned error: 403
+
+Osi@LAPTOP-G39P2MC1 MINGW64 /c/users/osi/documents/github/BestTechReferences/BestTechReferences (EddiesContribution)
+$
